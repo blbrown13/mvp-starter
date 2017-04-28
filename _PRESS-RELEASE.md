@@ -1,4 +1,4 @@
-# Project Name #
+# MVP #
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,41 +17,32 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
   Hotel Rating for Exercise
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
   A product for traveling runners and fitness types who can view or rate hotels based on their running or exercise friendliness and accessibility.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
   This product is a hotel rating for the traveling runner or athlete who can either rate or view hotels based on their running and/or exercise accessibility. The rating is a score ranging from 1-10 that is crowdsourced/user-generated, and based on a number of factors including some of the following: having an onsite gym or swimming pool (e.g. weight/cardio equipment and hours), proximity to nearby parks and paths, presence of sidewalks on the road, general area safety, well-lit at night, etc. Its score is entirely based on feedback from other travelers. Fitness enthusiasts who will be traveling can now have the ability to research a better hotel option, as well as provide further feedback for the community sharing their experience.
 
 ## Problem ##
-  > Describe the problem your product solves.
   There is currently no existing product like this on the market that focuses on this niche for travelers. All info presently needs to be independently gathered from various sources such as comments or pictures in Yelp, Trip Advisor, or Google Reviews. Other resources also include using Google Maps to determine what parks and paths are nearby and accessible. There is presently no dedicated way to share this info with others.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
   This app is a simple rating system similar to Yelp or Trip Advisor curated by the community of travelers who like to exercise. Its intent is to help make a more informed decision when researching hotel options for travel or vacation. The goal is to alleviate any frustration during the initial research phase over the uncertainty of having the ability to run or exercise while staying at a hotel. It also provides a place for users to rate hotels after their stay for the benefit of future travelers and the fitness community. The score is a point system based on a set number of pre-determined factors. Current solution is a simple interface that displays a hotel's basic info and its score. Future iterations would include searching by zip code, minimum score threshold, as well as connecting with third-party apps like the Strava API to view a heat map which generates suggested routes in the area.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
   "As runners and athletes ourselves, we recognize the struggle of wanting to maintain some semblance of basic fitness while traveling for
   work or on vacation. Often, we find that our hotel of choice is hit or miss in terms of exercise and working out options. We want this app to be simple and easy to use for all travelers out there who just want to know whether a hotel is going to be a viable and/or safe opportunity to exercise during their stay." -Brandon Brown
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
   Search for a hotel where you wish to stay. If that hotel is in the database, it will display its info and score. You can also provide your own
   rating which contributes to the aggregate score, or add a new hotel and your score to the system for other users to view.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
   "I always try to go on a run while traveling or on vacation, and I wish I had this app a long time ago to help me make a better
   choice of where to stay in an unfamiliar city."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
   Our hope is that this app benefits our users and is a value-add to their travel experience. Visit our site now and enter a hotel to get
   started!
