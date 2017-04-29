@@ -36,6 +36,7 @@ class App extends React.Component {
       data: { term: term },
       success : (result) => {
         console.log('Returned from server');
+        console.log(result);
         this.setState({
           hotels: result
         })
@@ -49,8 +50,8 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>Hotel Runnability Rating</h1>
-      <List hotels={this.state.hotels}/>
       <Search onSearch={this.search}/>
+      <List hotels={this.state.hotels}/>
     </div>)
   }
 }
