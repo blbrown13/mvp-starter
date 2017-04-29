@@ -2,7 +2,8 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    { props.item.description }
+    <div>{ props.hotel.name }</div>
+    <div>{ props.hotel.description }</div>
   </div>
 )
 

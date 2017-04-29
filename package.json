@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "db-start": "mkdir mongo-db; mongod --database-mongo/index.js mongo-db"
   },
   "author": "Beth Johnson",
   "license": "ISC",
