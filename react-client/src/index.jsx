@@ -8,9 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hotels: [{name: 'Hotel California', description: 'Such a lovely place'}]
+      hotels: []
     }
-    console.log('app is loaded');
+    console.log('< App is loaded >');
     this.search = this.search.bind(this);
   }
 
@@ -35,9 +35,9 @@ class App extends React.Component {
       url: "http://127.0.0.1:3000/hotels/import",
       data: { term: term },
       success : (result) => {
-        console.log('server post request');
+        console.log('Returned from server');
         this.setState({
-          repos: result
+          hotels: result
         })
       },
       error: function(error) {
@@ -48,7 +48,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Hotel Fitness Rating</h1>
+      <h1>Hotel Runnability Rating</h1>
       <List hotels={this.state.hotels}/>
       <Search onSearch={this.search}/>
     </div>)

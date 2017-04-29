@@ -2,8 +2,10 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    <div>{ props.hotel.name }</div>
-    <div>{ props.hotel.description }</div>
+    <div>City: { props.hotel.city }</div>
+    <div>Zipcode: { props.hotel.zipcode }</div>
+    <div>Latitude: { props.hotel.latitude }</div>
+    <div>Longitude: { props.hotel.longitude }</div>
   </div>
 )
 
