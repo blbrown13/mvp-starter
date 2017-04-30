@@ -21,10 +21,10 @@ class ListItem extends React.Component {
   // }
 
   render () {
-    return (<div>
-      <div>Name: { this.props.hotel.name }</div>
+    return (<div id="list-item">
+      <div id="list-item-name">{ this.props.hotel.name }</div>
+      <div id="list-item-rating">Runnability: { this.props.hotel.rating }</div>
       <div>Address: { this.props.hotel.vicinity }</div>
-      <div>Rating: { this.props.hotel.rating }</div>
       <div>Location: { this.props.hotel.loc }</div>
     </div>)
   }

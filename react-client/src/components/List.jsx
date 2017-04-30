@@ -22,7 +22,7 @@ class List extends React.Component {
   // }
 
   render () {
-    return (<div>
+    return (<div id="list-view">
       <h4> Hotel List </h4>
       There are { this.props.hotels.length } hotels.
       { this.props.hotels.map((hotel, index) => <ListItem hotel={hotel} key={index}/>)}

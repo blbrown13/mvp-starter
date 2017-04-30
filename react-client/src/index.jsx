@@ -36,7 +36,6 @@ class App extends React.Component {
       data: { term: term },
       success : (result) => {
         console.log('Returned from server');
-        console.log(result);
         this.setState({
           hotels: result
         })
