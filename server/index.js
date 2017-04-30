@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.post('/hotels/import', function (req, res) {
   console.log(`\nSearched for: ${req.body.term}`);
-  console.log('Using geocoder...');
+  // console.log('Using geocoder...');
   searchGeocoder(req.body.term, res);
 });
 
@@ -39,7 +39,7 @@ let searchGeocoder = (term, res) => {
 }
 
 let searchGoogleRadar = (geoData, res) => {
-  console.log('*inside google radar*');
+  // console.log('*inside google radar*');
 
   let city = geoData[0].city;
   let state = geoData[0].administrativeLevels.level1short;
@@ -58,10 +58,10 @@ let searchGoogleRadar = (geoData, res) => {
 
   request(google_places_url, (error, response, body) => {
     let data = JSON.parse(body);
-    data.results.loc = loc;
-    console.log(loc);
+
     for (var i = 0; i < data.results.length; i++) {
       data.results[i].loc = loc;
+      data.results[i].rating = 0;
     }
     // console.log(data.results);
     // console.log(`There are ${data.results.length} hotels within ${radius}m of ${zip} in ${city}`);
