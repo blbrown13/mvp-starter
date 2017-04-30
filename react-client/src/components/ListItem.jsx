@@ -10,15 +10,15 @@ class ListItem extends React.Component {
     // this.search = this.search.bind(this);
   }
   //
-  // onChange(event) {
-  //   this.setState({
-  //     term: event.target.value
-  //   })
-  // }
+  onChange(event) {
+    this.setState({
+      term: event.target.value
+    })
+  }
   //
-  // updateDB() {
-  //   this.props.onSearch(this.state.term);
-  // }
+  updateDB() {
+    this.props.onSearch(this.state.term);
+  }
 
   render () {
     return (<div id="list-item">
@@ -26,6 +26,8 @@ class ListItem extends React.Component {
       <div id="list-item-rating">Runnability: { this.props.hotel.rating }</div>
       <div>Address: { this.props.hotel.vicinity }</div>
       <div>Location: { this.props.hotel.loc }</div>
+        Update Runnability: <input value={this.state.term} onChange={this.onChange}/>
+      <button onClick={this.updateDB}> Update </button>
     </div>)
   }
 }
