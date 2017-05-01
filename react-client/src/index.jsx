@@ -10,7 +10,6 @@ class App extends React.Component {
     this.state = {
       hotels: []
     }
-    console.log('< App is loaded >');
     this.search = this.search.bind(this);
   }
 
@@ -29,13 +28,13 @@ class App extends React.Component {
   }
 
   search (term) {
-    console.log(`Client made $ajax POST request to server for: ${term}...`);
+    console.log(`Client made POST request to server for: ${term}...`);
     $.ajax({
       type: "POST",
       url: "http://127.0.0.1:3000/hotels/import",
       data: { term: term },
       success : (result) => {
-        console.log('Returned from server');
+        console.log('Success! Returned from server...');
         this.setState({
           hotels: result
         })

@@ -4,42 +4,35 @@ class ListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      thing: ''
-    }
-    // this.onChange = this.onChange.bind(this);
-    // this.search = this.search.bind(this);
+      rating: this.props.hotel.rating
+    };
+    this.onChange = this.onChange.bind(this);
+    this.updateRating = this.updateRating.bind(this);
   }
-  //
+
   onChange(event) {
     this.setState({
-      term: event.target.value
+      rating: event.target.value
     })
   }
-  //
-  updateDB() {
-    this.props.onSearch(this.state.term);
+
+  updateRating(event) {
+    this.props.hotel.rating = event.target.value;
+    this.refs.updateBar.value = '';
+    console.log('updated rating');
+    console.log('gonna save to database...');
   }
 
   render () {
     return (<div id="list-item">
       <div id="list-item-name">{ this.props.hotel.name }</div>
-      <div id="list-item-rating">Runnability: { this.props.hotel.rating }</div>
-      <div>Address: { this.props.hotel.vicinity }</div>
-      <div>Location: { this.props.hotel.loc }</div>
-        Update Runnability: <input value={this.state.term} onChange={this.onChange}/>
-      <button onClick={this.updateDB}> Update </button>
+      <div id="list-item-rating">Runnability: { this.state.rating }</div>
+      <div>{ this.props.hotel.vicinity }</div>
+      <div>{ this.props.hotel.loc }</div>
+        Update Runnability: <input value={this.state.rating} onChange={this.onChange} ref="updateBar"/>
+      <button onClick={this.updateRating}> Update </button>
     </div>)
   }
 }
 
 export default ListItem;
-
-// const ListItem = (props) => (
-//   <div>
-//     <div>Name: { props.hotel.name }</div>
-//     <div>Address: { props.hotel.vicinity }</div>
-//     <div>Rating: { props.hotel.rating }</div>
-//     <div>Location: { props.hotel.loc }</div>
-//   </div>
-// )
-//
