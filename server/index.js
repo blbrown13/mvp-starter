@@ -8,13 +8,11 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 
 app.post('/hotels/import', function (req, res) {
   console.log(`\nSearched for: ${req.body.term}`);
-  // console.log('Using geocoder...');
   searchGeocoder(req.body.term, res);
 });
 
@@ -39,8 +37,6 @@ let searchGeocoder = (term, res) => {
 }
 
 let searchGoogleRadar = (geoData, res) => {
-  // console.log('*inside google radar*');
-
   let city = geoData[0].city;
   let state = geoData[0].administrativeLevels.level1short;
   let zip = geoData[0].zipcode;
@@ -71,24 +67,24 @@ let searchGoogleRadar = (geoData, res) => {
 
 app.get('/hotels', function (req, res) {
   console.log('-> GET loaded /hotels');
-  items.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+  // items.selectAll(function(err, data) {
+  //   if(err) {
+  //     res.sendStatus(500);
+  //   } else {
+  //     res.json(data);
+  //   }
+  // });
 });
 
 app.get('/', function (req, res) {
   console.log('-> GET loaded /');
-  items.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+  // items.selectAll(function(err, data) {
+  //   if(err) {
+  //     res.sendStatus(500);
+  //   } else {
+  //     res.json(data);
+  //   }
+  // });
 });
 
 app.listen(3000, function() {
