@@ -1,18 +1,24 @@
 h1 {
   color: #3D9970;
   font-family: Verdana;
-  /*border: 3px solid #0074D9;
-  border-radius: 5px;*/
+  text-shadow: 2px 2px #191970;
+}
+
+#search-bar {
+  color: white;
+  background-color: #6495ED;
+  border-radius: 3px;
+  margin: 2px;
 }
 
 div #list-item {
-  border: 1px solid #0074D9;
+  border: 1px solid #191970;
   border-radius: 5px;
   margin: 5px;
 }
 
 div #list-view {
-  border: 1px solid #85144b;
+  border: 1px solid #3D9970;
   border-radius: 5px;
   margin: 5px;
 
@@ -35,8 +41,3 @@ div #list-view {
   float: right;
   margin-right: 3px;
 }
-
-/*div {
-  border: 1px solid #0074D9;
-  border-radius: 5px;
-}*/

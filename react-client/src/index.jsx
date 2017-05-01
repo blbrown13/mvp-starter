@@ -46,11 +46,12 @@ class App extends React.Component {
   }
 
   render () {
-    return (<div>
-      <h1>Hotel Runnability Rating</h1>
-      <Search onSearch={this.search}/>
-      <List hotels={this.state.hotels}/>
-    </div>)
+    return (
+      <div>
+        <h1>Hotel Runnability Rating</h1>
+        <Search onSearch={this.search}/>
+        <List hotels={this.state.hotels}/>
+      </div>)
   }
 }
 

@@ -24,7 +24,7 @@ class Search extends React.Component {
     return (<div>
       <h4>Search for a hotel!</h4>
       Enter a city or zip code: <input value={this.state.term} onChange={this.onChange}/>
-      <button onClick={this.search}> Search Hotels </button>
+      <button id="search-bar" onClick={this.search}> Search Hotels </button>
     </div>)
   }
 }
