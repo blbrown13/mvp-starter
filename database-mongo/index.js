@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost:3000/');
 
 var db = mongoose.connection;
 
@@ -26,12 +26,10 @@ process.on('SIGINT', function() {
   });
 });
 
-
 var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
-  // for unique records...
-  //ex: url: {type: String, required: true, unique: true, dropDups: true}
+  name: String,
+  address: {type: String, required: true, unique: true, dropDups: true},
+  rating: Number
 });
 
 var Item = mongoose.model('Item', itemSchema);
@@ -47,3 +45,4 @@ var selectAll = function(callback) {
 };
 
 module.exports.selectAll = selectAll;
+module.exports.Item = Item;
